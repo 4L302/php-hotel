@@ -45,7 +45,7 @@ $hotels = [
 $filteredHotels = [];
 
 if(!empty($_GET['parking'])){
-    $parking = ($GET_['parking'] == 'si') ? true : false;
+    $parking = ($_GET['parking'] == 'si') ? true : false;
     foreach($hotels as $hotel){
         if($hotel['parking'] === $parking) {
             $filteredHotels[] = $hotel;
@@ -106,7 +106,6 @@ if(!empty($_GET['parking'])){
                 <table class="table">
                     <thead>
                         <tr>
-
                             <th scope="col">Name</th>
                             <th scope="col">Description</th>
                             <th scope="col">Parking</th>
